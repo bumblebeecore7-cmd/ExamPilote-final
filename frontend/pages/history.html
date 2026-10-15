@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Quizzes & History — ExamPilote</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/history.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="../index.html" class="brand">
+        <div class="brand-icon">EP</div>
+        <span>ExamPilote</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="generate.html" class="nav-link">Generate MCQs</a>
+        <a href="history.html" class="nav-link active">Saved & History</a>
+      </nav>
+      <div class="nav-actions">
+        <div id="db-status-badge" class="status-pill">
+          <span class="status-dot"></span> Checking DB...
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container history-container">
+    <div style="margin-bottom: 2rem;">
+      <h1 style="font-size: 2rem; font-weight: 800;">Saved Question Sets & Quiz History</h1>
+      <p style="color: var(--text-muted);">Retrieve your saved question sets and view previous quiz performance from MongoDB Atlas.</p>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="history-tabs">
+      <button type="button" id="tab-sets" class="tab-btn active">Question Sets</button>
+      <button type="button" id="tab-attempts" class="tab-btn">Previous Attempts</button>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading-indicator" style="text-align: center; padding: 3rem 0; display: none;">
+      <div class="spinner" style="width: 2.5rem; height: 2.5rem; color: var(--primary);"></div>
+      <p style="margin-top: 1rem; color: var(--text-muted);">Fetching records from MongoDB Atlas...</p>
+    </div>
+
+    <!-- History List -->
+    <div id="history-list" class="history-grid">
+      <!-- Cards rendered dynamically -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="empty-state" style="display: none;">
+      <div class="empty-icon">📚</div>
+      <h2 id="empty-title" class="empty-title">No Records Found</h2>
+      <p id="empty-desc" class="empty-desc">Generate questions from your study materials to start building your quiz bank.</p>
+      <a href="generate.html" class="btn btn-primary">Generate Questions Now</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>© 2026 ExamPilote. All rights reserved.</div>
+      <div>Cloud Data Synced with MongoDB Atlas.</div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/pages/history.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+Generate exactly {question_count} high-quality questions with the following parameters:
+
+Target Difficulty: {difficulty}
+Question Format: {format}
+Topic: {topic}
+
+{study_material_section}
+
+{custom_instructions_section}
+
+Ensure that:
+- Every question has unique ID (e.g. q1, q2, ...)
+- There are exactly {question_count} questions in the JSON array.
+- For Single-correct MCQ format, provide 4 options each.
+- For True/False format, provide options ["True", "False"].
+- The "correct_answer" string precisely matches one of the options.
+- The "difficulty" field is "{difficulty}".
+- The "format" field is "{format}".
+
+Respond ONLY with the JSON array.

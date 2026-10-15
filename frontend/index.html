@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExamPilote — AI-Powered Educational MCQ Platform</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">EP</div>
+        <span>ExamPilote</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="pages/generate.html" class="nav-link">Generate MCQs</a>
+        <a href="pages/history.html" class="nav-link">Saved & History</a>
+      </nav>
+      <div class="nav-actions">
+        <div id="db-status-badge" class="status-pill">
+          <span class="status-dot"></span> Checking DB...
+        </div>
+        <a href="pages/generate.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero-section">
+      <div class="hero-badge">
+        <span>✨ Powered by Next-Gen AI & MongoDB Atlas</span>
+      </div>
+      <h1 class="hero-title">
+        Master Any Subject with <span>Intelligent MCQs</span>
+      </h1>
+      <p class="hero-subtitle">
+        Turn your textbooks, lecture notes, syllabus topics, and documents into high-yield, psychometrically sound multiple-choice questions with educational explanations.
+      </p>
+      <div class="hero-cta">
+        <a href="pages/generate.html" class="btn btn-primary btn-lg">Generate Questions Now</a>
+        <a href="pages/history.html" class="btn btn-secondary btn-lg">View Past Quizzes</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📄</div>
+        <h3 class="feature-title">Multi-Format Ingestion</h3>
+        <p class="feature-desc">
+          Paste notes directly, input any examination topic, or upload TXT, PDF, and DOCX documents with automated server-side text extraction.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title">Rigorous MCQ Validation</h3>
+        <p class="feature-desc">
+          Strict Pydantic schemas verify option counts, distinct choices, exact answer matching, and pedagogical explanations before persistence.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">☁️</div>
+        <h3 class="feature-title">MongoDB Atlas Cloud Data</h3>
+        <p class="feature-desc">
+          Persistent question sets, interactive quiz attempts, time metrics, and performance analytics stored reliably in your MongoDB Atlas cluster.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🧩</div>
+        <h3 class="feature-title">Modular Architecture</h3>
+        <p class="feature-desc">
+          Swap AI providers, change database repositories, or customize prompt templates independently without rewriting application logic.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>© 2026 ExamPilote. All rights reserved. Built for students & educators.</div>
+      <div>Designed with Vanilla ES Modules & FastAPI.</div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

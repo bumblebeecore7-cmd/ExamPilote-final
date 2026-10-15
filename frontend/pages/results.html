@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results — ExamPilote</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/results.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="../index.html" class="brand">
+        <div class="brand-icon">EP</div>
+        <span>ExamPilote</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="generate.html" class="nav-link">Generate MCQs</a>
+        <a href="history.html" class="nav-link">Saved & History</a>
+      </nav>
+      <div class="nav-actions">
+        <div id="db-status-badge" class="status-pill">
+          <span class="status-dot"></span> Checking DB...
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container results-container">
+    <!-- Error State -->
+    <div id="results-error" class="card" style="display: none; text-align: center; padding: 3rem;">
+      <h2 style="color: var(--danger); margin-bottom: 1rem;">Results Unavailable</h2>
+      <p id="error-message" style="color: var(--text-muted); margin-bottom: 1.5rem;"></p>
+      <a href="generate.html" class="btn btn-primary">Generate a Quiz</a>
+    </div>
+
+    <!-- Active Results View -->
+    <div id="results-view">
+      <div class="score-banner">
+        <div style="font-size: 1rem; opacity: 0.9; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Quiz Completed</div>
+        <h1 id="results-topic" style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">Subject</h1>
+        <div id="score-percentage" class="score-percentage">0%</div>
+        <p id="score-tagline" class="score-tagline">Calculating results...</p>
+
+        <div class="score-metrics">
+          <div class="metric-item">
+            <span id="metric-score" class="metric-value">0 / 0</span>
+            <span class="metric-label">Total Score</span>
+          </div>
+          <div class="metric-item">
+            <span id="metric-correct" class="metric-value">0</span>
+            <span class="metric-label">Correct</span>
+          </div>
+          <div class="metric-item">
+            <span id="metric-incorrect" class="metric-value">0</span>
+            <span class="metric-label">Incorrect</span>
+          </div>
+          <div class="metric-item">
+            <span id="metric-time" class="metric-value">0s</span>
+            <span class="metric-label">Time Spent</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="results-actions">
+        <button type="button" id="retake-btn" class="btn btn-primary btn-lg">Retake This Quiz</button>
+        <a href="generate.html" class="btn btn-secondary btn-lg">Generate New Questions</a>
+        <a href="history.html" class="btn btn-secondary btn-lg">View Quiz History</a>
+      </div>
+
+      <!-- Question-by-Question Review -->
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="font-size: 1.5rem; font-weight: 800;">Detailed Question Review</h2>
+        <p style="color: var(--text-muted);">Review your answers alongside verified correct answers and pedagogical explanations.</p>
+      </div>
+
+      <div id="reviews-container" class="review-list">
+        <!-- Review cards injected dynamically -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>© 2026 ExamPilote. All rights reserved.</div>
+      <div>Persisted in MongoDB Atlas.</div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/pages/results.js"></script>
+</body>
+</html>

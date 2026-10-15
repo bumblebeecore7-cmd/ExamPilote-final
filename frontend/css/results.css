@@ -1,0 +1,130 @@
+.results-container {
+  max-width: 850px;
+  margin: 2rem auto;
+}
+
+.score-banner {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2.5rem;
+}
+
+.score-percentage {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.score-tagline {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+}
+
+.score-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.results-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  border-left: 5px solid var(--border);
+}
+
+.review-card.correct {
+  border-left-color: var(--success);
+}
+
+.review-card.incorrect {
+  border-left-color: var(--danger);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.review-question {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.review-option {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  background-color: var(--bg-alt);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-option.is-correct {
+  background-color: var(--success-light);
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  font-weight: 600;
+}
+
+.review-option.is-selected-wrong {
+  background-color: var(--danger-light);
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  font-weight: 600;
+}
+
+.review-explanation {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background-color: var(--bg-alt);
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
